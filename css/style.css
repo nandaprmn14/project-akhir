@@ -88,6 +88,13 @@ body{
   background-attachment: scroll;
   animation: zoomHero 18s ease-in-out infinite alternate;
 }
+
+@media(min-width:992px){
+
+#showcase{
+    background-attachment:fixed;
+}
+
 @keyframes zoomHero{
   from{
     background-size: 100% auto;

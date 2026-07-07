@@ -74,12 +74,9 @@
   display: flex;
   align-items: center;
   padding-top: 170px;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-attachment: scroll;
   animation: zoomHero 18s ease-in-out infinite alternate;
 }
-
 @keyframes zoomHero{
   from{
     background-size: 100% auto;

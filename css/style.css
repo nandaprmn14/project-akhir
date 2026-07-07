@@ -1,0 +1,402 @@
+/*-- NAVBAR --*/
+#main-navbar{
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+}
+
+#main-navbar .nav-link{
+  border-bottom: 5px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+
+#main-navbar a:hover, #main-navbar .active{
+  border-bottom-color: #8a5a44;
+  transition: border-color 350ms ease;
+}
+
+/* logo di kiri navbar */
+#main-navbar .navbar-logo{
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+#main-navbar .navbar-brand{
+  border-bottom: 0 !important;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+#main-navbar .navbar-brand-text{
+  font-weight: 900;
+  color: #6b3f2a;
+  line-height: 1;
+}
+
+/*-- THEME TOKO KOPI (COZY BROWN / CREAM) --*/
+:root{
+
+  --cream: #fbf3e6;
+  --cream-2: #fff7ea;
+  --brown: #6b3f2a;
+  --brown-2: #8a5a44;
+  --brown-3: #b07a57;
+  --coffee: #3a2419;
+}
+
+/* Ukurran h1 atau judul */
+.hero-title{
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+/* ukuran subtitle */
+.hero-subtitle{
+  font-size: 1.25rem;
+  max-width: 650px;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.hero-badges{
+  margin-top: 2rem !important;
+}
+/*-- SHOWCASE --*/
+#showcase{
+  background: url('../img/hero1.jpeg') center center/cover no-repeat;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 170px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  animation: zoomHero 18s ease-in-out infinite alternate;
+}
+
+@keyframes zoomHero{
+  from{
+    background-size: 100% auto;
+  }
+  to{
+    background-size: 110% auto;
+  }
+}
+
+.dark-overlay{
+  background-color: rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.45);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+  inset: 0;
+}
+
+.warm-overlay{
+  /* overlay hangat di atas dark overlay */
+  background: linear-gradient(
+    120deg,
+    rgba(176, 122, 87, 0.55) 0%,
+    rgba(107, 63, 42, 0.35) 45%,
+    rgba(0,0,0,0) 100%
+  );
+  position: absolute;
+  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.hero-title{
+  text-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  font-weight: 800;
+}
+
+.hero-accent{
+  color: #ffd28d;
+}
+
+.hero-subtitle{
+  max-width: 720px;
+  margin: 0 auto;
+  color: rgba(255,255,255,0.92);
+}
+
+.btn-coffee{
+  background: linear-gradient(90deg, var(--brown) 0%, var(--brown-2) 100%);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: .75rem 1.25rem;
+  box-shadow: 0 10px 25px rgba(107, 63, 42, 0.35);
+  transition: .3s;
+}
+.btn-coffee:hover{
+  filter: brightness(1.25);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.btn-coffee-outline{
+  border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,0.75);
+  color: #fff;
+  font-weight: 700;
+  padding: .75rem 1.25rem;
+}
+
+.coffee-pill{
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: .5rem .75rem;
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  color: rgba(255,255,255,0.95);
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+.about-stat h3{
+    font-size:2rem;
+    font-weight:900;
+}
+
+.about-thumb{
+    width: 100%;
+    height: 180px;      /* Sesuaikan tinggi yang diinginkan */
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/*-- GLOBAL SECTION STYLE --*/
+.section-title{
+  color: var(--brown);
+  font-weight: 800;
+}
+
+.bg-cream{
+  background-color: var(--cream);
+}
+
+.text-brown{
+  color: var(--brown);
+}
+
+.text-brown-2{
+  color: var(--brown-2);
+}
+
+/*-- FEATURE / ABOUT CARDS --*/
+.feature-card{
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.1rem;
+  border: 1px solid rgba(107, 63, 42, 0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.feature-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.06);
+}
+
+.feature-icon{
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(176, 122, 87, 0.18), rgba(107, 63, 42, 0.10));
+  color: var(--brown-2);
+  font-size: 1.45rem;
+}
+
+/* about media badges */
+.about-media{
+  position: relative;
+}
+
+.about-badge{
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(107, 63, 42, 0.12);
+  border-radius: 16px;
+  padding: .75rem .9rem;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.10);
+  width: 190px;
+  margin-top: 2rem !important
+}
+.about-badge-top{
+  font-weight: 800;
+  color: var(--brown-2);
+  font-size: .95rem;
+}
+.about-badge-mid{
+  font-weight: 900;
+  color: var(--brown);
+  font-size: 1.25rem;
+  margin-top: .1rem;
+}
+.about-badge-bottom{
+  color: rgba(58, 36, 25, 0.8);
+  font-weight: 700;
+  margin-top: .15rem;
+  font-size: .95rem;
+}
+
+/*-- MENU CARD --*/
+.menu-card{
+  background: #fff;
+  border: 1px solid rgba(107, 63, 42, 0.12);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  height: 100%;
+}
+.menu-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+}
+
+.menu-img{
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-img img{
+  width: 100%;
+  height: 195px;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 300ms ease;
+}
+.menu-card:hover .menu-img img{
+  transform: scale(1.08);
+}
+
+.menu-tag{
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(107, 63, 42, 0.12);
+  color: var(--brown);
+  font-weight: 900;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+}
+
+.menu-body{
+  padding: 1.1rem 1.1rem 1.25rem;
+}
+
+.menu-price{
+  background: linear-gradient(135deg, rgba(176, 122, 87, 0.25), rgba(107, 63, 42, 0.14));
+  border: 1px solid rgba(107, 63, 42, 0.15);
+  border-radius: 14px;
+  padding: .5rem .8rem;
+  font-weight: 900;
+  color: var(--brown);
+  white-space: nowrap;
+}
+
+.coffee-chip{
+  background: rgba(176, 122, 87, 0.10);
+  border: 1px solid rgba(176, 122, 87, 0.18);
+  color: rgba(58, 36, 25, 0.9);
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+/*-- TESTIMONIALS --*/
+.testimonial-card{
+  background: #fff;
+  border-radius: 22px;
+  border: 1px solid rgba(107, 63, 42, 0.12);
+  padding: 1.1rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+}
+
+.testimonial-avatar{
+  width: 54px;
+  height: 54px;
+  object-fit: cover;
+  border: 3px solid rgba(176, 122, 87, 0.25);
+}
+
+.rating i{
+  color: #f1b64c;
+  margin-right: 2px;
+}
+
+/*-- GALLERY --*/
+.gallery-img{
+  display: grid;
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+  border: 1px solid rgba(107, 63, 42, 0.10);
+  height: 300px;
+  object-fit: cover;
+}
+
+/*-- CONTACT --*/
+.contact-list{
+  display: grid;
+  gap: .75rem;
+}
+
+.contact-item{
+  background: #fff;
+  border: 1px solid rgba(107, 63, 42, 0.12);
+  border-radius: 16px;
+  padding: .75rem 1rem;
+  color: var(--brown);
+  font-weight: 700;
+}
+
+.contact-card{
+  background: #fff;
+  border-radius: 22px;
+  border: 1px solid rgba(107, 63, 42, 0.12);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+}
+
+footer{
+    background:linear-gradient(180deg,#4b2e23 0%,#2d1b14 100%
+    );
+}
+
+.footer-map{
+    overflow:hidden;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.footer-map iframe{
+    width:100%;
+    height:220px;
+    border:0;
+}
+
+/* Keep bootstrap container sizing for XXL */
+@media (min-width: 1200px) {
+  .container { max-width: 1140px; }
+}
+

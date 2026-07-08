@@ -90,6 +90,10 @@ body{
 }
 
 @media(min-width:992px){
+  #showcase{
+    padding-top: 200px;
+  }
+}
 
 #showcase{
     background-attachment:fixed;
@@ -414,4 +418,3 @@ footer{
 @media (min-width: 1200px) {
   .container { max-width: 1140px; }
 }
-
